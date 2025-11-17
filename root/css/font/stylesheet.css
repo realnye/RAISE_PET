@@ -1,0 +1,200 @@
+
+/* 1-1. Pretendard********************************************************/
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-ExtraBold.eot');
+    src: url('Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-ExtraBold.woff2') format('woff2'),
+        url('Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-Bold.eot');
+    src: url('Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-Bold.woff2') format('woff2'),
+        url('Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-Black.eot');
+    src: url('Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-Black.woff2') format('woff2'),
+        url('Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-ExtraLight.eot');
+    src: url('Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-ExtraLight.woff2') format('woff2'),
+        url('Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-Light.eot');
+    src: url('Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-Light.woff2') format('woff2'),
+        url('Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-Medium.eot');
+    src: url('Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-Medium.woff2') format('woff2'),
+        url('Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-Regular.eot');
+    src: url('Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-Regular.woff2') format('woff2'),
+        url('Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-SemiBold.eot');
+    src: url('Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-SemiBold.woff2') format('woff2'),
+        url('Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('Pretendard-Thin.eot');
+    src: url('Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Pretendard-Thin.woff2') format('woff2'),
+        url('Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* 1-2. Pretendard JP********************************************************/
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-Bold.eot');
+    src: url('PretendardJP-Bold.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-Bold.woff2') format('woff2'),
+        url('PretendardJP-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-Black.eot');
+    src: url('PretendardJP-Black.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-Black.woff2') format('woff2'),
+        url('PretendardJP-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-ExtraBold.eot');
+    src: url('PretendardJP-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-ExtraBold.woff2') format('woff2'),
+        url('PretendardJP-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-ExtraLight.eot');
+    src: url('PretendardJP-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-ExtraLight.woff2') format('woff2'),
+        url('PretendardJP-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-Medium.eot');
+    src: url('PretendardJP-Medium.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-Medium.woff2') format('woff2'),
+        url('PretendardJP-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-Light.eot');
+    src: url('PretendardJP-Light.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-Light.woff2') format('woff2'),
+        url('PretendardJP-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-Regular.eot');
+    src: url('PretendardJP-Regular.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-Regular.woff2') format('woff2'),
+        url('PretendardJP-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-SemiBold.eot');
+    src: url('PretendardJP-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-SemiBold.woff2') format('woff2'),
+        url('PretendardJP-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard JP';
+    src: url('PretendardJP-Thin.eot');
+    src: url('PretendardJP-Thin.eot?#iefix') format('embedded-opentype'),
+        url('PretendardJP-Thin.woff2') format('woff2'),
+        url('PretendardJP-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}

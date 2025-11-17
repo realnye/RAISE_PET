@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <!-- 기본 문자 인코딩 및 반응형 설정 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no, address=no, email=no" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- 파비콘 및 PWA 기본 설정 -->
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon-32x32.svg" /> <!-- 최신 브라우저용 -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png" />
+
+  <!-- 폰트 및 리소스 사전 연결 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- 다국어 지원 메타 태그 -->
+  <meta name="language" content="ja" />
+  <meta name="available-languages" content="ko, en, ja" />
+  <meta http-equiv="content-language" content="ko" />
+  <link rel="canonical" href="https://도메인" />
+  <link rel="alternate" hreflang="x-default" href="https://도메인" />
+  <link rel="alternate" hreflang="ko" href="https://도메인/" />
+  <link rel="alternate" hreflang="en" href="https://도메인/lang/en/index.html" />
+  <link rel="alternate" hreflang="jp" href="https://도메인/lang/jp/index.html" />
+
+  <!-- 페이지 제목 -->
+  <title data-i18n="page_title">RememVers_g2e</title>
+
+  <!-- 페이지 설명 -->
+  <meta name="description" content="심리회복 솔루션 반려견 메모리얼 플랫폼, 리멤버스" />
+  <meta name="author" content="RememVers" />
+
+  <!-- Open Graph 태그 -->
+  <meta property="og:title" content="RememVers" />
+  <meta property="og:description" content="심리회복 솔루션 반려견 메모리얼 플랫폼, 리멤버스" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="RememVers" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:url" content="https://www.도메인" />
+  <meta property="og:image" content="https://www.도메인/images/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://www.도메인/images/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="심리회복 솔루션 반려견 메모리얼 플랫폼, 리멤버스" />
+
+  <!-- Twitter 카드 -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RememVers" />
+  <meta name="twitter:description" content="심리회복 솔루션 반려견 메모리얼 플랫폼, 리멤버스" />
+  <meta name="twitter:image" content="https://www.도메인/images/og-image.jpg" />
+  <meta name="twitter:image:alt" content="심리회복 솔루션 반려견 메모리얼 플랫폼, 리멤버스" />
+
+  <!-- 브라우저 컬러 설정 -->
+  <meta name="theme-color" content="#FF935B" />
+
+  <!-- 기본 css 로드 -->
+  <!-- Quicksand -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../lib/aos.css">
+  <link rel="stylesheet" href="../lib/hover-min.css" media="all">
+  <link rel="stylesheet" href="../css/g2e.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <!-- 구조화 데이터 -->
+  <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Corporation",
+        "name": "CJ S&S JAPAN",
+        "url": "https://도메인/", 
+        "logo": "https://도메인/images/logo_dark.png",
+        "telephone": "있으면 기입",
+        "email": "있으면 기입",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "있으면 기입",
+          "addressLocality": "있으면 기입Nagoya",
+          "addressRegion": "있으면 기입Aichi",
+          "postalCode": "있으면 기입460-0008",
+          "addressCountry": "있으면 기입JP"
+        }
+      }
+      </script>
+</head>
+
+<body>
+  <header>
+    <div class="inner">
+      <h1>
+        <a href="../index.html">
+          <img src="../assets/logos/RMV-combination_light.png" alt="RememVers-logo-dark">
+        </a>
+      </h1>
+
+      <nav class="menu">
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="#"><span>G2E</span></a></li>
+          <li><a href="token.html">Token</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang">
+        <div class="current-lang">
+          <h6>한국어</h6>
+          <i>
+            <svg>
+              <use href="../public/sprite.svg#fi-sr-angle-small-down"></use>
+            </svg>
+          </i>
+        </div>
+
+        <nav class="lang-list">
+          <ul>
+            <li class="ko">
+              <a href="#">
+                <h6>한국어</h6>
+              </a>
+            </li>
+            <li class="en">
+              <a href="#">
+                <h6>ENG</h6>
+              </a>
+            </li>
+            <li class="jp">
+              <a href="#">
+                <h6>日本語</h6>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="txt-wrap" data-aos="fade-zoom-in" data-aos-duration="2000">
+      <div class="point-label">
+        <i>
+          <svg>
+            <use href="../public/sprite.svg#Ellipse"></use>
+          </svg>
+        </i>
+        <p>PLATFORM</p>
+      </div>
+      <h2>
+        GROW TO EARN<br>
+        플랫폼
+      </h2>
+    </div>
+  </main>
+
+  <section class="article-wrapper">
+    <article class="stat inner">
+      <div class="title-wrap">
+        <div class="title-v2">
+          <div class="title-v1">
+            <div class="point-label">
+              <i>
+                <svg>
+                  <use href="../public/sprite.svg#Ellipse"></use>
+                </svg>
+              </i>
+              <p>AI-Pet Stat System</p>
+            </div>
+            <h2><strong>AI-Pet</strong> 성장시스템</h2>
+          </div>
+          <p class="v1">
+            AI 반려견은 기억과 상호작용을 통해 감정, 애정, 사회성 등 능력치를 점차 회복하며 성장합니다. 작은 쓰다듬기, 짧은 산책과 한 마디 말 속에 반려견은 당신을 기억하며 성장합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="contents">
+        <div class="ul-wrapper">
+          <ul>
+            <li class="box-v4">
+              <i>
+                <img src="../assets/icons/g2e_heart.svg" alt="heart-icon-svg">
+              </i>
+              <div class="txt-wrap">
+                <h4>애정도</h4>
+                <p>
+                  애착과 유대감이 높을수록 따뜻하고 친근한 반응
+                </p>
+              </div>
+            </li>
+
+            <li class="box-v4">
+              <i>
+                <img src="../assets/icons/g2e_energy.svg" alt="heart-icon-svg">
+              </i>
+              <div class="txt-wrap">
+                <h4>에너지</h4>
+                <p>
+                  산책, 놀이와 훈련 시 소모되며 일정시간마다 회복
+                </p>
+              </div>
+            </li>
+
+            <li class="box-v4">
+              <i>
+                <img src="../assets/icons/g2e_in.svg" alt="heart-icon-svg">
+              </i>
+              <div class="txt-wrap">
+                <h4>지능</h4>
+                <p>
+                  고급 기술 습득 및 미션 수행 능력에 영향
+                </p>
+              </div>
+            </li>
+
+            <li class="box-v4">
+              <i>
+                <img src="../assets/icons/g2e_emotion.svg" alt="heart-icon-svg">
+              </i>
+              <div class="txt-wrap">
+                <h4>감정</h4>
+                <p>
+                  AI 펫의 표정, 말투, 반응의 다양성 향상
+                </p>
+              </div>
+            </li>
+
+            <li class="box-v4">
+              <i>
+                <img src="../assets/icons/g2e_tech.svg" alt="heart-icon-svg">
+              </i>
+              <div class="txt-wrap">
+                <h4>기술</h4>
+                <p>
+                  습득 트릭 및 미션 수행력에 따른 미션 획득 점수 향상
+                </p>
+              </div>
+            </li>
+
+            <li class="box-v4">
+              <i>
+                <img src="../assets/icons/g2e_social.svg" alt="heart-icon-svg">
+              </i>
+              <div class="txt-wrap">
+                <h4>사회성</h4>
+                <p>
+                  커뮤니티 활동 획득 및 친구사귀기 능력 향상
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="item">
+      <div class="inner">
+        <div class="img-wrap">
+          <img src="../assets/images/g2e/item_dog-with-items.png" alt="각종 아이템들로 둘러 싸인 강아지 이미지">
+        </div>
+        <div class="title-v2" data-aos="fade-zoom-in" data-aos-duration="1000">
+          <div class="title-v1">
+            <div class="point-label">
+              <i>
+                <svg>
+                  <use href="../public/sprite.svg#Ellipse"></use>
+                </svg>
+              </i>
+              <p>ITEM</p>
+            </div>
+            <h2><strong>성장형 아이템 시스템</strong></h2>
+          </div>
+          <p class="v1">
+            리드줄부터 장난감, 간식, 훈련 교제, 의류 및 액세서리와 특수 아이템까지
+            <br><br>
+            AI 반려견과의 교감을 풍요롭게 할 다양한 아이템을 만나보세요. 각 아이템은 업그레이드를 통해 AI 반려견의 감정, 에너지, 사회성 등 능력치 향상에 기여하며 더욱 깊은 교감을 선사합니다.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="walk-mode">
+      <div class="walk-mode_inner">
+        <div class="left-contents" data-aos="fade-zoom-in" data-aos-duration="1000">
+          <div class="title-v2">
+            <div class="title-v1">
+              <div class="point-label">
+                <i>
+                  <svg>
+                    <use href="../public/sprite.svg#Ellipse"></use>
+                  </svg>
+                </i>
+                <p>WALKING MODE</p>
+              </div>
+              <h2>산책모드</h2>
+            </div>
+            <p class="v1">
+              AI 반려견과의 산책 기능을 통해 일상의 루틴을 공유하고, 감정 포인트와 에너지를 동시에 상승시킬 수 있습니다. 단순한 활동이 아닌, 추억을 쌓고 성장을 경험하는 소중한 시간입니다.
+            </p>
+          </div>
+
+          <ul class="button-wrap">
+            <li>
+              <div class="btn_name-icon-v1 hvr-pulse-grow">
+                <a href="#">
+                  <i>
+                    <svg>
+                      <use href="../public/sprite.svg#fi-sr-paw"></use>
+                    </svg>
+                  </i>
+                  만보기 기능
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="btn_name-icon-v1 hvr-pulse-grow">
+                <a href="#">
+                  <i>
+                    <svg>
+                      <use href="../public/sprite.svg#fi-sr-heart"></use>
+                    </svg>
+                  </i>
+                  감정 포인트 및 체력 회복 속도 상승
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="btn_name-icon-v1 hvr-pulse-grow">
+                <a href="#">
+                  <i>
+                    <svg>
+                      <use href="../public/sprite.svg#fi-sr-billiard"></use>
+                    </svg>
+                  </i>
+                  보상 포인트
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="btn_name-icon-v1 hvr-pulse-grow">
+                <a href="#">
+                  <i>
+                    <svg>
+                      <use href="../public/sprite.svg#fi-sr-glasses"></use>
+                    </svg>
+                  </i>
+                  AR 디바이스 연동
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="right-contents">
+          <video autoplay muted loop playsinline>
+            <source src="../assets/videos/walk_ui.webm" type="video/webm">
+          </video>
+        </div>
+      </div>
+    </article>
+
+    <article class="community">
+      <div class="inner">
+        <div class="keyword-contents">
+          <ul class="wrapper">
+            <li>
+              <div class="btn_name-icon-v2" data-aos="zoom-in" data-aos-delay="300">
+                <a href="#">
+                  <i>
+                    <img src="../assets/icons/fi-sr-globe.svg" alt="지구 모양 아이콘 이미지">
+                  </i>
+                  AI 펫 기반 커뮤니티 추천
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="btn_name-icon-v2" data-aos="zoom-in" data-aos-delay="1100">
+                <a href="#">
+                  <i>
+                    <img src="../assets/icons/fi-rr-cake-birthday.svg" alt="생일 케이크 아이콘 이미지">
+                  </i>
+                  특별한 기념일에 파티 이벤트
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="btn_name-icon-v2" data-aos="zoom-in" data-aos-delay="1900">
+                <a href="#">
+                  <i>
+                    <img src="../assets/icons/fi-rr-copyright.svg" alt="저작권 아이콘 이미지">
+                  </i>
+                  성장 포인트 및 리워드 획득
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="btn_name-icon-v2" data-aos="zoom-in" data-aos-delay="2700">
+                <a href="#">
+                  <i>
+                    <img src="../assets/icons/fi-rr-play-alt.svg" alt="">
+                  </i>
+                  펫 친구와 온라인 챌린지
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="title-v2">
+          <div class="title-v1">
+            <div class="point-label">
+              <i>
+                <svg>
+                  <use href="../public/sprite.svg#Ellipse"></use>
+                </svg>
+              </i>
+              <p>COMMUNITY</p>
+            </div>
+            <h2>감성 기반 <strong>소셜기능</strong></h2>
+          </div>
+          <p class="v1">
+            기억을 나누고, 공감하며, 함께 성장하는 반려 커뮤니티<br>
+            AI 반려견이 먼저 친구가 되면, 그 교감을 통해 주인들끼리도 자연스럽게
+            연결되는 이중 레이어 소셜 네트워크입니다.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <article class="live">
+      <div class="inner">
+        <div class="title-v2" data-aos="fade-zoom-in" data-aos-duration="1000">
+          <div class="title-v5">
+            <h5 class="label">Digital Pet LIVE</h5>
+            <h2>
+              365일 오프라인 추모관과<br>
+              연결된 디지털 펫 라이브
+            </h2>
+          </div>
+
+          <p class="v1">
+            AI 펫과의 실시간 상호작용을 AR로 구현하여 스마트폰 또는 AR 글래스를 통해 현실 공간에서 교감할 수 있습니다.
+          </p>
+        </div>
+
+        <div class="video-wrap">
+          <video autoplay muted loop playsinline>
+            <source src="../assets/videos/digital-pet-live.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <ul>
+          <li class="box-v3">
+            <h3>추모관 연동</h3>
+            <p class="v1">
+              오프라인 추모관과 연결해<br>
+              AR로 반려동물 재현
+            </p>
+          </li>
+
+          <li class="box-v3">
+            <h3>미션 및 게임</h3>
+            <p class="v1">
+              AR환경에서<br>
+              산책, 놀이, 훈련 미션 수행
+            </p>
+          </li>
+
+          <li class="box-v3">
+            <h3>실시간 반응</h3>
+            <p class="v1">
+              유저의 표정, 제스처, 목소리에<br>
+              즉각 반응
+            </p>
+          </li>
+
+          <li class="box-v3">
+            <h3>공간 인식</h3>
+            <p class="v1">
+              실제 공간 위에<br>
+              펫이 자연스럽게 등장
+            </p>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+
+
+
+  <div class="experience">
+    <div class="wrapper">
+      <div class="txt">
+        <p class="title">반려동물과의 영원한 추억을 경험하세요</p>
+        <p class="des">
+          The world’s first emotional pet-tech that grows with your memories.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="inner">
+      <div class="info">
+        <h1>
+          <a href="#">
+            <img src="../assets/logos/RMV-combination_main-color.png" alt="RememVers-logo-light">
+          </a>
+        </h1>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="#">G2E</a></li>
+            <li><a href="token.html">Token</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="copy">
+        <p>
+          Copyright &copy; Rememvers | All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- script 로드 -->
+  <!-- library -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="../lib/aos.js"></script>
+  <script src="../lib/chart.js"></script>
+  <!-- chart.js :DataLabels 플러그인 -->
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+  <!-- g2e.js -->
+  <script src="../js/components.js"></script>
+  <script src="../js/g2e.js"></script>
+  <script src="../js/responsive.js"></script>
+</body>
+
+</html>
