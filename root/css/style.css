@@ -139,6 +139,21 @@
 }
 
 
+/*
+- DynaPuff
+
+.dynapuff-<uniquifier> {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+*/
+
+
 :root {
   /* 1. 폰트 및 전역 CSS 변수(재할당 금지) 설정 */
 
@@ -176,6 +191,7 @@
   --main-font-01: 'HsJandari';
   --main-font-02: 'Paperozi', sans-serif;
   --main-font-03: 'Suit', sans-serif;
+  --sub-font-01: "DynaPuff", system-ui;
 
   /* 폰트 정렬 기준 */
   * {
@@ -193,6 +209,7 @@
   --ivory: #FEF9E6;
   --blue: #ABD2EF;
   --yellow: #FFD43A;
+  --orange: #FE9D35;
   --side-pager-color: #353535;
 
 
@@ -211,9 +228,6 @@
   font-family: var(--main-font-03);
   font-optical-sizing: auto;
   font-style: normal;
-
-
-
 }
 
 /******************************************
@@ -254,7 +268,7 @@
 
   /* p : des, text */
   p {
-    font-family: var(--sub-font);
+    font-family: var(--main-font-03);
     font-size: var(--pc-size-p);
     line-height: var(--pc-line-height-p);
     font-weight: var(--font-weight-nomoral);

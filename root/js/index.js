@@ -1,5 +1,5 @@
 // index.js
-// Side pager full-page 스크롤 함수
+// Side pager full-page 스크롤 함수 ////////////////////////////////////////////////////////////
 $(function () {
     const $window = $(window);
     const $htmlBody = $('html, body');
@@ -128,11 +128,74 @@ $(function () {
 
 
 
-// AOS 라이브러리 초기화
+// AOS 기본값 설정 ///////////////////////////////////////////////////////////////////////
 AOS.init({
     duration: 800, // 기본 애니메이션 지속 시간
     once: false, // 애니메이션을 한 번만 실행할지 여부 (false = 스크롤할 때마다 재생)
     mirror: false, // 요소를 지나칠 때 애니메이션 반복 o/x
     delay: 0, // 지연 시간
     easing: 'ease-in-out', // 이징 함수
+});
+
+
+// GSAP float(둥둥떠있는 효과) 설정 //////////////////////////////////////////////////////
+gsap.to(".float", {
+    y: -12,               // 살짝만 떠오르도록 (너무 크면 출렁거림 느낌)
+    duration: 1.3,        // 지속시간
+    repeat: -1,           // 무한 반복
+    yoyo: true,           // 위아래 왕복
+    ease: "power1.inOut",   // 가속도
+    stagger: {
+        each: 0,         // 아이콘 사이 타이밍 간격
+        from: "random"      // 시작 위치를 랜덤으로 해서 동시에 움직이지 않게
+    }
+});
+
+// GSAP rotate(회전효과) 설정 //////////////////////////////////////////////////////
+gsap.to(".rotate", {
+    rotation: 360,
+    duration: 6,          // 1바퀴 도는 시간 (짧을수록 빨라짐)
+    ease: "linear",       // 일정 속도 (멈춤X, 가감속X)
+    repeat: -1            // 무한 반복
+});
+
+
+// 임시로 header nav의 ul li a 태그 이동 기능 막기 함수
+// 개발/테스트 목적: true로 설정하면 언어 선택 링크 클릭해도 이동하지 않음
+const DISABLE_LANG_LINKS_NAVIGATION = false; // false = 정상 작동, true = 이동 막기
+
+// 언어 선택 링크 네비게이션 비활성화 함수
+function disableLangLinksNavigation() {
+    const $langLinks = $('header nav ul li a'); // 한국어, ENG, 日本語 링크들
+    
+    if (DISABLE_LANG_LINKS_NAVIGATION) {
+        // 이동 기능 막기: 클릭 이벤트만 방지
+        $langLinks.on('click.disable', function(event) {
+            event.preventDefault();
+        });
+        
+        // 시각적 표시: 비활성화 상태 표시
+        $langLinks.css({
+            'opacity': '0.5',
+            'cursor': 'not-allowed',
+            'pointer-events': 'none'
+        });
+        
+    } else {
+        // 이동 기능 활성화: 비활성화 이벤트 제거
+        $langLinks.off('click.disable');
+        
+        // 스타일 복원
+        $langLinks.css({
+            'opacity': '',
+            'cursor': '',
+            'pointer-events': ''
+        });
+        
+    }
+}
+
+// 페이지 로드 시 설정 적용
+$(document).ready(function() {
+    disableLangLinksNavigation();
 });
