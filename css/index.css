@@ -254,13 +254,17 @@ main p.des {
     text-align: center;
     font-family: var(--main-font-03);
     font-weight: 800;
-    font-size: 56px;
-    line-height: 60px;
+    font-size: 60px;
+    line-height: 80px;
     color: var(--ivory);
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+
+#quote .quote-char {
+    display: inline-block;
 }
 
 
@@ -310,30 +314,6 @@ article .wrapper-img {}
 
 article .wrapper-img img {
     width: 100%;
-}
-
-/*article.about-us****************************************************/
-article.about-us {
-    background:
-        url(../assets/images/about-us_bg.jpg) no-repeat center center / 100% auto;
-}
-
-article.about-us .inner {}
-
-article.about-us .wrapper-txt {
-    text-align: center;
-    margin: 0 auto;
-    color: var(--white);
-}
-
-article.about-us .wrapper-txt h2 {
-    margin-bottom: 48px;
-}
-
-article.about-us .wrapper-txt p {
-    font-size: 56px;
-    line-height: 60px;
-    font-weight: 800;
 }
 
 /*article.reward****************************************************/

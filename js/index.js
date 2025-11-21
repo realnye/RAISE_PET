@@ -217,7 +217,57 @@ function disableLangLinksNavigation() {
     }
 }
 
+// hero 영역 텍스트(quote) GSAP 애니메이션 함수
+function initQuoteAnimation() {
+    const quoteElement = document.getElementById('quote');
+
+    if (!quoteElement || !window.gsap) {
+        return;
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    Array.from(quoteElement.childNodes).forEach((node) => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            node.textContent.split('').forEach((char) => {
+                const span = document.createElement('span');
+                span.className = 'quote-char';
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                fragment.appendChild(span);
+            });
+        } else if (node.nodeName === 'BR') {
+            fragment.appendChild(node.cloneNode());
+        } else {
+            fragment.appendChild(node.cloneNode(true));
+        }
+    });
+
+    quoteElement.innerHTML = '';
+    quoteElement.appendChild(fragment);
+
+    const chars = quoteElement.querySelectorAll('.quote-char');
+
+    if (!chars.length) {
+        return;
+    }
+
+    gsap.fromTo(
+        chars,
+        { fontWeight: 200 },
+        {
+            fontWeight: 800,
+            duration: 1,
+            ease: 'power3.out',
+            stagger: {
+                each: 0.06,
+                from: 'start',
+            },
+        },
+    );
+}
+
 // 페이지 로드 시 설정 적용
 $(document).ready(function() {
     disableLangLinksNavigation();
+    initQuoteAnimation();
 });
