@@ -266,8 +266,39 @@ function initQuoteAnimation() {
     );
 }
 
+// 언어 선택 드롭다운 메뉴 제어 함수
+function initLangDropdown() {
+    const $langNav = $('header nav.lang-nav');
+    const $langBtn = $langNav.find('.lang-btn');
+    const $langList = $langNav.find('ul.lang-list-wrap');
+
+    // .lang-btn에 마우스 진입 시 메뉴 열기
+    $langBtn.on('mouseenter', function() {
+        $langList.addClass('is-open');
+    });
+
+    // .lang-nav 또는 .lang-list-wrap에서 마우스가 완전히 벗어났을 때만 메뉴 닫기
+    function handleLangAreaLeave(event) {
+        const relatedTarget = event.relatedTarget;
+        const isInsideLangArea = relatedTarget && (
+            $langNav[0].contains(relatedTarget) ||
+            $langList[0].contains(relatedTarget)
+        );
+
+        if (isInsideLangArea) {
+            return;
+        }
+
+        $langList.removeClass('is-open');
+    }
+
+    $langNav.on('mouseleave', handleLangAreaLeave);
+    $langList.on('mouseleave', handleLangAreaLeave);
+}
+
 // 페이지 로드 시 설정 적용
 $(document).ready(function() {
     disableLangLinksNavigation();
     initQuoteAnimation();
+    initLangDropdown();
 });

@@ -84,27 +84,31 @@ header nav.lang-nav .lang-btn svg {
 }
 
 
-header nav.lang-nav ul {
+header nav.lang-nav ul.lang-list-wrap {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
     position: absolute;
     left: 50%;
-    bottom: -150px;
     transform: translateX(-50%);
+    padding-top: 20px;
 
     opacity: 0;
+    visibility: hidden;
     transition: all 0.2s ease-in-out;
+    pointer-events: none;
 }
 
-header nav.lang-nav:hover ul {
+header nav.lang-nav ul.lang-list-wrap.is-open {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 
-header nav.lang-nav ul li {}
+header nav.lang-nav ul.lang-list-wrap li {}
 
-header nav.lang-nav ul li a {
+header nav.lang-nav ul.lang-list-wrap li a {
     text-align: center;
     white-space: nowrap;
     /* 글자가 단어 단위로 떨어지지 않도록 추가 */
