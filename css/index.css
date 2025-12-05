@@ -2,8 +2,19 @@
 @charset "utf-8";
 
 /* body */
+html,
 body {
     background-color: #F8F3ED;
+
+    /* 스크롤 동작은 유지하면서 브라우저 기본 스크롤바를 숨김 */
+    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* WebKit 기반 브라우저 스크롤바 숨김 */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* header */

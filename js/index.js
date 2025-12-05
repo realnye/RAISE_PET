@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerColorTargets = document.querySelectorAll('header svg, header nav.lang-nav ul li a');
     const pagerItems = pager ? Array.from(pager.querySelectorAll('li')) : [];
     const pagerLinks = pager ? Array.from(pager.querySelectorAll('a')) : [];
-    const animationDuration = 800;
+    const animationDuration = 600; //애니메이션 페이지 다음-이전 이동 전환 속도
 
     // DOM 순서대로 모든 섹션(#p1 ~ #pN) 수집
     const sections = Array.from(document.querySelectorAll('[id^="p"]')).filter((section) =>
@@ -163,6 +163,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'wheel',
         (event) => {
             if (isAnimating || !sections.length) {
+                // 애니메이션 중 추가 휠 스크롤이 기본 스크롤을 발생시켜 끊기는 느낌이 나므로 막아줌
+                event.preventDefault();
                 return;
             }
             const { deltaY } = event;
@@ -172,6 +174,47 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (deltaY < 0 && currentIndex > 0) {
                 targetIndex = currentIndex - 1;
             }
+            if (targetIndex !== currentIndex) {
+                event.preventDefault();
+                scrollToSection(sections[targetIndex]);
+            }
+        },
+        { passive: false },
+    );
+
+    // 키보드 네비게이션 (화살표 키)
+    window.addEventListener(
+        'keydown',
+        (event) => {
+            if (isAnimating || !sections.length) {
+                return;
+            }
+
+            const target = event.target;
+            const isFormField =
+                target instanceof HTMLInputElement ||
+                target instanceof HTMLTextAreaElement ||
+                target instanceof HTMLSelectElement ||
+                target.isContentEditable;
+
+            if (isFormField) {
+                return;
+            }
+
+            let targetIndex = currentIndex;
+
+            if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                if (currentIndex < sections.length - 1) {
+                    targetIndex = currentIndex + 1;
+                }
+            } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+                if (currentIndex > 0) {
+                    targetIndex = currentIndex - 1;
+                }
+            } else {
+                return;
+            }
+
             if (targetIndex !== currentIndex) {
                 event.preventDefault();
                 scrollToSection(sections[targetIndex]);
