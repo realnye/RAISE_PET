@@ -315,19 +315,18 @@ function initQuoteAnimation() {
         return;
     }
 
-    gsap.fromTo(
-        chars,
-        { fontWeight: 200 },
-        {
-            fontWeight: 800,
-            duration: 1,
-            ease: 'power3.out',
-            stagger: {
-                each: 0.06,
-                from: 'start',
-            },
+    gsap
+    .timeline({ repeat: -1, repeatDelay: 0.8 })
+    .set(chars, { fontWeight: 200 })
+    .to(chars, {
+        fontWeight: 800,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: {
+            each: 0.06,
+            from: 'start',
         },
-    );
+    });
 }
 
 // 언어 선택 드롭다운 메뉴 제어 함수
@@ -363,9 +362,26 @@ function initLangDropdown() {
     langList.addEventListener('mouseleave', handleLangAreaLeave);
 }
 
+// 비디오 끊김 없이 반복 재생되도록 timeupdate 이벤트 설정
+function initSeamlessVideoLoop() {
+    const video = document.querySelector('video');
+
+    if (!video) {
+        return;
+    }
+
+    video.addEventListener('timeupdate', () => {
+        if (video.duration && video.currentTime > video.duration - 0.05) {
+            video.currentTime = 0;
+            video.play();
+        }
+    });
+}
+
 // 페이지 로드 시 설정 적용
 document.addEventListener('DOMContentLoaded', () => {
     disableLangLinksNavigation();
     initQuoteAnimation();
     initLangDropdown();
+    initSeamlessVideoLoop();
 });
